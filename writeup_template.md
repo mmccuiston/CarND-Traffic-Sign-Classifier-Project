@@ -31,7 +31,7 @@ First a plot of a random image within the training set.
 ![random sign](./writeup/random-sign.jpg | width=100)
 
 Second is a histogram of frequency of classes within the training, validation, and test sets.
-<img src="./writeup/plot1.jpg" width="250"/>
+<img src="./writeup/plot1.png" width="250"/>
 ![plot1](./writeup/plot1.png | width=100)
 ![plot2](./writeup/plot2.jpg | width=100)
 ![plot3](./writeup/plot3.jpg | width=100)
