@@ -28,12 +28,12 @@ signs data set:
 Here is an exploratory visualization of the data set. 
 
 First a plot of a random image within the training set.
-![random sign](./writeup/random-sign.jpg)
+![random sign](./writeup/random-sign.jpg =250x)
 
 Second is a histogram of frequency of classes within the training, validation, and test sets.
-![plot1](./writeup/plot1.jpg)
-![plot2](./writeup/plot2.jpg)
-![plot3](./writeup/plot3.jpg)
+![plot1](./writeup/plot1.jpg =250x)
+![plot2](./writeup/plot2.jpg =250x)
+![plot3](./writeup/plot3.jpg =250x)
 
 
 ###Design and Test a Model Architecture
@@ -110,11 +110,11 @@ The reason I chose to start with the Lenet architecture is because of it's succe
 
 Here are five German traffic signs that I found on the web:
 
-![do not enter](./web-samples/do-not-enter.jpg) 
-![priority road](./web-samples/priority-road.jpg) 
-![speed limit 30](./web-samples/speed-limit-30.jpg) 
-![speed limit 60](./web-samples/speed-limit-60.jpg) 
-![stop](./web-samples/stop.jpg)
+![do not enter](./web-samples/do-not-enter.jpg =250x) 
+![priority road](./web-samples/priority-road.jpg =250x) 
+![speed limit 30](./web-samples/speed-limit-30.jpg =250x) 
+![speed limit 60](./web-samples/speed-limit-60.jpg =250x) 
+![stop](./web-samples/stop.jpg =250x)
 
 The third image might be difficult to classify because the sign is off center and doesn't occupy the whole image.
 
