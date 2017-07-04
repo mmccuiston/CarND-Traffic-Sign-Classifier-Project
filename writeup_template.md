@@ -26,7 +26,6 @@ signs data set:
 Here is an exploratory visualization of the data set. 
 
 First a plot of a random image within the training set.
-![random sign](./writeup/random-sign.jpg | width=100)
 <img src="./writeup/random-sign.png" width="250"/>
 
 Second is a histogram of frequency of classes within the training, validation, and test sets.
