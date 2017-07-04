@@ -6,8 +6,6 @@
 
 ### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
 This is my writeup for the Traffic Sign Classifier project.  You can find my code here [project code](https://github.com/mmccuiston/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
@@ -17,7 +15,7 @@ This is my writeup for the Traffic Sign Classifier project.  You can find my cod
 I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is 69598
+* The size of training set is 104397
 * The size of the validation set is 4410
 * The size of test set is 12630
 * The shape of a traffic sign image is 32 x 32 x 3
@@ -40,7 +38,7 @@ Second is a histogram of frequency of classes within the training, validation, a
 
 #### 1. Image preprocessing
 
-First I preprocessed the images by normalizing them using a min-max method.  I decided not to grayscale the images, because I thought intuitively that the color channels could be useful for detection of certain signs.  I augmented the original training set with the same images with random noise added.  This was to protect against overfitting and provide more images for classes that had relatively few.
+First I preprocessed the images by normalizing them between the values of -1 and 1.  I decided not to grayscale the images, because I thought intuitively that the color channels could be useful for detection of certain signs.  I augmented the original training set with the same images with random noise added.  I also added duplicate images with a slight clockwise rotation. This was to protect against overfitting and provide more images for classes that had relatively few.
 
 The final model I used was a modified LeNet architecture described below.
 
@@ -58,17 +56,17 @@ The final model I used was a modified LeNet architecture described below.
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
 | Fully connected		| 400 to 120        									|
 | RELU					|												|
-| Drop-out| 50% drop-out rate |
+| Drop-out| 50% drop-out keep rate |
 | Fully connected		| 120 to 84        									|
 | RELU					|												|
-| Drop-out| 50% drop-out rate |
+| Drop-out| 50% drop-out keep rate |
 | Fully connected		| 84 to 43        									|
 | RELU					|												|
 | Softmax				|        									|
 
 #### 3. Training
 
-I trained my model using a batch size of 512 over 50 epochs.  I used the ADAM optimization algorithm with a learning rate of 0.005.
+I trained my model using a batch size of 256 over 30 epochs.  I used the ADAM optimization algorithm with a learning rate of 0.001.
 
 #### 4. 
 
@@ -96,7 +94,7 @@ I decided to start with the Lenet architecture described below.
 | RELU					|												|
 | Softmax				|        									|
 
-With this architecture I was able to achieve validation accuracy ~92.2%, but my test set accuracy was significantly lower ~80% suggesting overfitting.  To lessen overfitting I decided to add a drop-out layer after both of the max pooling layers giving the final model described in the previous section.
+With this architecture I was able to achieve validation accuracy I was finding the validation accuracy to be well above the training accuracy, suggesting overfitting.  To lessen overfitting I decided to add a drop-out layer after two of the fully connected layers giving the final model described in the previous section.
 
 After adding drop-out the validation accuracy and the test set accuracy were within ~1% and around 94%.
 
@@ -106,7 +104,7 @@ The reason I chose to start with the Lenet architecture is because of it's succe
 
 ### Test a Model on New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Traffic signs from the web
 
 Here are five German traffic signs that I found on the web:
 
@@ -119,7 +117,7 @@ Here are five German traffic signs that I found on the web:
 
 The third image might be difficult to classify because the sign is off center and doesn't occupy the whole image.
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Model Predictions
 
 Here are the results of the prediction:
 
