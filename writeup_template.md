@@ -6,7 +6,7 @@
 
 ### Writeup / README
 
-This is my writeup for the Traffic Sign Classifier project.  You can find my code here [project code](https://github.com/mmccuiston/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+This is my writeup for the Traffic Sign Classifier project.  You can find my code here [here](https://github.com/mmccuiston/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb) and the output from said notebook [here](https://github.com/mmccuiston/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html)
 
 ### Data Set Summary & Exploration
 
